@@ -1,0 +1,2 @@
+connecting Max/MSP and p5.js:
+- in sketch, 
