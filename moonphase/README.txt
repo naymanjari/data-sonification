@@ -14,8 +14,7 @@ Eclipse will create the most annoying sound I can possibly make
 
 running a p5 app:
 
-cd
-/Volumes/MUSIC/audio\ prog\ II/data\ sonification/moonphase
+cd /Volumes/MUSIC/audio\ prog\ II/data\ sonification/moonphase
 
 to run a web server
 http-server -c-1

@@ -2,10 +2,15 @@ connecting Max/MSP and p5.js:
 - in sketch, must call library
 const maxAPI = require('max-api');
 
+*error* Uncaught Reference Error: require is not defined
+
 - in Max, must have node object
 [node.script sketch.js]
 
 
 may require a second sketch that recieves data from first sketch to send to max
 
-how to make max "run" simultaneously with the sketch
+how to make max patch "run" simultaneously with the sketch
+need to be able to recieve data from javascript/jweb to max patch
+
+libraries? using osc? websockets?
