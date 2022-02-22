@@ -8,19 +8,21 @@ sonified elements:
 Phase - panning
 Az - volume
 New Moon and Full Moon will each have a unique sound when 1
-(after extending) eclipse will create the most annoying sound I can possibly make
+Eclipse will create the most annoying sound I can possibly make
 
 
 
 running a p5 app:
 
 cd
-/Volumes/MUSIC/audio\ prog\ II/moonphase
+/Volumes/MUSIC/audio\ prog\ II/data\ sonification/moonphase
 
 to run a web server
 http-server -c-1
 
 point our browser to localhost:8080
+
+editing a git repository:
 
 open a terminal, navigate to your project
 

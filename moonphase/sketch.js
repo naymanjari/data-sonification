@@ -54,6 +54,10 @@ function draw() {
       if (waxing == true) {
       path = map(path, 0, 100, 160, 400);
       }
+    const maxApi = require('max-api');
+    maxApi.addHandler('phase', () => {
+      maxApi.post(path);
+    });
     }
   }else{ //if millies() % 1000 < 500
     if(counted == true){
@@ -74,3 +78,8 @@ function draw() {
     ellipse(path, 0.0025 * ((path-400)*(path-400)) + 400, width/3, height/3);
   }
 }
+
+const maxApi = require('max-api');
+maxApi.addHandler('phase', () => {
+  maxApi.post(path);
+});
