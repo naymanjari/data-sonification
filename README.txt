@@ -11,13 +11,16 @@ New Moon and Full Moon will each have a unique sound when 1
 Eclipse will create the most annoying sound I can possibly make
 
 commiting:
-cd /Volumes/MUSIC/audio\ prog\ II/data\ sonification
+cd /Volumes/MUSIC/audioprogII/data_sonification
 
 running a p5 app:
-cd /Volumes/MUSIC/audio\ prog\ II/data\ sonification/moonphase
+cd /Volumes/MUSIC/audioprogII/data_sonification
 
-to run a web server
+to run a python server:
 http-server -c-1
+
+to run a web server through node:
+node server.js
 
 point our browser to localhost:8080
 

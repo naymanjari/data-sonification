@@ -21,5 +21,5 @@ websockets? UDP (tester in Max)?
 
 
 initialize a node project:
-cd /Volumes/MUSIC/audio\ prog\ II/data\ sonification
+cd /Volumes/MUSIC/audioprogII/data_sonification
 npm init -y

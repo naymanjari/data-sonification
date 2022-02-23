@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1678.0, 112.0, 1282.0, 677.0 ],
+		"rect" : [ 1478.0, 350.0, 1282.0, 677.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,43 +39,6 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
-				"box" : 				{
-					"id" : "obj-22",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 856.0, 166.0, 42.0, 22.0 ],
-					"text" : "reload"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-20",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 704.0, 166.0, 135.0, 22.0 ],
-					"text" : "url http://127.0.0.1:8080"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-18",
-					"maxclass" : "jweb",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 693.0, 259.0, 564.0, 505.0 ],
-					"rendermode" : 0,
-					"url" : "http://127.0.0.1:8080"
-				}
-
-			}
-, 			{
 				"box" : 				{
 					"id" : "obj-17",
 					"maxclass" : "message",
@@ -630,14 +593,16 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 14.0, 121.0, 447.0, 22.0 ],
+					"patching_rect" : [ 14.0, 121.0, 369.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
+						"node_bin_path" : "",
+						"npm_bin_path" : "",
 						"watch" : 0
 					}
 ,
-					"text" : "node.script \"/Volumes/MUSIC/audio prog II/data sonification/moonphase/sketch.js\""
+					"text" : "node.script /Volumes/MUSIC/audioprogII/data_sonification/sketch.js"
 				}
 
 			}
@@ -652,7 +617,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-15", 0 ],
+					"destination" : [ "obj-15", 1 ],
 					"order" : 1,
 					"source" : [ "obj-1", 0 ]
 				}
@@ -683,20 +648,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
 					"source" : [ "obj-17", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-18", 0 ],
-					"source" : [ "obj-20", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-18", 0 ],
-					"source" : [ "obj-22", 0 ]
 				}
 
 			}
@@ -752,8 +703,8 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "sketch.js",
-				"bootpath" : "/Volumes/MUSIC/audio prog II/data sonification/moonphase",
-				"patcherrelativepath" : "./moonphase",
+				"bootpath" : "/Volumes/MUSIC/audioprogII/data_sonification",
+				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
