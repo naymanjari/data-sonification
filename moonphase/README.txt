@@ -10,10 +10,10 @@ Az - volume
 New Moon and Full Moon will each have a unique sound when 1
 Eclipse will create the most annoying sound I can possibly make
 
-
+commiting:
+cd /Volumes/MUSIC/audio\ prog\ II/data\ sonification
 
 running a p5 app:
-
 cd /Volumes/MUSIC/audio\ prog\ II/data\ sonification/moonphase
 
 to run a web server
