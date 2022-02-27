@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1478.0, 350.0, 1282.0, 677.0 ],
+		"rect" : [ 1474.0, 145.0, 1508.0, 821.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,6 +40,52 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-21",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 948.0, 239.5, 150.0, 47.0 ],
+					"text" : "eclipse will have as annoying of a sound I can make"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-19",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 948.0, 159.0, 150.0, 47.0 ],
+					"text" : "new moon and full moon will have a small sound they play"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-16",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 437.0, 162.0, 150.0, 20.0 ],
+					"text" : "azimoth affects volume"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-12",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 432.0, 322.0, 150.0, 20.0 ],
+					"text" : "phase affects panning"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-17",
 					"maxclass" : "message",
 					"numinlets" : 2,
@@ -68,7 +114,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 579.5, 51.0, 47.0, 22.0 ],
+					"patching_rect" : [ 597.5, 252.0, 47.0, 22.0 ],
 					"text" : "zl nth 1"
 				}
 
@@ -81,7 +127,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 631.0, 106.0, 168.0, 26.0 ]
+					"patching_rect" : [ 649.0, 307.0, 168.0, 26.0 ]
 				}
 
 			}
@@ -94,7 +140,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 592.0, 204.0, 22.0, 140.0 ]
+					"patching_rect" : [ 610.0, 405.0, 22.0, 140.0 ]
 				}
 
 			}
@@ -107,7 +153,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 547.0, 204.0, 22.0, 140.0 ]
+					"patching_rect" : [ 565.0, 405.0, 22.0, 140.0 ]
 				}
 
 			}
@@ -117,7 +163,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 554.0, 368.0, 35.0, 22.0 ],
+					"patching_rect" : [ 572.0, 569.0, 35.0, 22.0 ],
 					"text" : "dac~"
 				}
 
@@ -183,7 +229,7 @@
 						"lines" : [  ]
 					}
 ,
-					"patching_rect" : [ 344.0, 66.0, 32.0, 22.0 ],
+					"patching_rect" : [ 560.0, 184.0, 32.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -529,7 +575,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 516.0, 143.0, 53.0, 22.0 ],
+					"patching_rect" : [ 534.0, 344.0, 53.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -597,8 +643,6 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
-						"node_bin_path" : "",
-						"npm_bin_path" : "",
 						"watch" : 0
 					}
 ,

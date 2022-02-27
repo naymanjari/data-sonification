@@ -3,6 +3,7 @@ connecting Max/MSP and p5.js:
 const maxAPI = require('max-api');
 
 *error* Uncaught Reference Error: require is not defined
+- require is a node thing
 
 - in Max, must have node object
 [node.script sketch.js]
