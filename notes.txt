@@ -1,25 +1,7 @@
-connecting Max/MSP and p5.js:
-- in sketch, must call library
-const maxAPI = require('max-api');
-
-*error* Uncaught Reference Error: require is not defined
-- require is a node thing
-
-- in Max, must have node object
-[node.script sketch.js]
-
-maybe send audio data to the web instead of other way around?
-
-may require a second sketch that recieves data from first sketch to send to max
-
-how to make max patch "run" simultaneously with the sketch
-need to be able to recieve data from javascript/jweb to max patch
-
 libraries?
-using osc?
+using osc? https://github.com/taboada/MaxClientJS
 websockets? UDP (tester in Max)?
 [dict]? https://youtu.be/KjStppG5nq8
-
 
 initialize a node project:
 cd /Volumes/MUSIC/audioprogII/data_sonification

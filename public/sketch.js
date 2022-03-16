@@ -1,4 +1,6 @@
-var socket;
+
+let socket;
+
 let table;
 let timer = 0;
 let previousSecond = 0;
@@ -10,25 +12,16 @@ let rows;
 let rowCount;
 let waning = false;
 let waxing = true;
+let eclipse = 0;
+let eclipsing = 0;
 
 function preload(){
   table = loadTable('assets/Delhi_Az_Eclipse_tenyears.csv', 'csv', 'header');
 }
 
 function setup() {
-  // Start a socket connection to the server
-  socket = io.connect('http://localhost:3000');
-  // if this server is running somewhere else do something like:
-  //socket = io.connect('https://socket-hack.herokuapp.com/');
-  // We make a named event called 'mouse' and write an
-  // anonymous callback function
-  socket.on('mouse',
-    // When we receive data
-    function(data) {
-      console.log("Got: " + data.x + " " + data.y);
-      
-    }
-  );
+  socket = io.connect('localhost:3000');
+  
   print(table.getRowCount() + ' total rows in table');
   print(table.getColumnCount() + ' total columns in table');
   rows = table.getRow();
@@ -53,6 +46,7 @@ function draw() {
     if(!counted){
       timer++;
       path = table.get(timer, phase);
+      eclipse = table.get(timer, 7);
       counted = true;
       if (table.get(timer, 6) == 1) { //6 is NewMoon
         waxing = true;
@@ -63,11 +57,20 @@ function draw() {
         waxing = false;
       }
       if (waning == true) {
-      path = map(path, 0, 100, 630, 400);
+        path = map(path, 0, 100, 630, 400);
       }
       if (waxing == true) {
-      path = map(path, 0, 100, 160, 400);
+        path = map(path, 0, 100, 160, 400);
       }
+      if (eclipse > 0){
+        eclipsing = 1;
+        print("Eclipse!");
+      } else if (eclipse == 0){
+        eclipsing = 0;
+      }
+      let pathX = path;
+      let pathY = 0.0025 * ((path-400)*(path-400)) + 400;
+      sendpath(pathX, pathY, eclipsing);
     }
   }else{ //if millies() % 1000 < 500
     if(counted == true){
@@ -80,41 +83,25 @@ function draw() {
 
   fill(150);
   ellipse(width/2, height/2, width/3, height/3);
-  //noStroke();
-  //fill(255, 252, 212, 20);
-  //ellipse(width/3, height/2, width/2, width/2);
+  
   for (var i = 0; i < timer; i++) { //2.66 is the 800/r  
     fill(0);
     ellipse(path, 0.0025 * ((path-400)*(path-400)) + 400, width/3, height/3);
   }
-
+  
 }
 
-var pathX = path
-var pathY = 0.0025 * ((path-400)*(path-400)) + 400
-
-function moonPhased() {
-  // Draw some white circles
-  //fill(random(255));
-  //noStroke();
-  //ellipse(mouseX,mouseY,10,10);
-  // Send the mouse coordinates
-  sendpath(pathX, pathY);
-}
 
 // Function for sending to the socket
-function sendpath(pathX, pathY) {
-  // We are sending!
-  console.log("sendphase: " + pathX + " " + pathY);
-  
-  // Make a little object with x and y
+function sendpath(pathX, pathY, eclipsing) {
 
-  var data = {pathX, pathY };
+
+  var data = {
+    x: pathX,
+    y: pathY,
+    e: eclipsing
+  };
 
   // Send that object to the socket
-  socket.emit('phase',data);
+  socket.emit('data',data);
 }
-//const maxApi = require('max-api');
-  //  maxApi.addHandler('phase', () => {
-    //  maxApi.outlet(path); //how to retrieve phase from sketch.js
-  //  });
