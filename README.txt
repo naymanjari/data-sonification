@@ -5,5 +5,6 @@ uses socket.io and UDP to talk between sketch.js and a max patch.
 the sketch uses Day, Phase, New Moon, Full Moon
 
 sonified elements:
-Phase - panning
+Phase - panning and tone
 Eclipse will create the most annoying sound I can possibly make
+Azimoth - extra tones
