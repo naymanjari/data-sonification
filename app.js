@@ -53,6 +53,10 @@ function sendOSC(){
       {
           type: "i",
           value: oscData.e
+      },
+      {
+          type: "f",
+          value: oscData.a
       }
     ]
 

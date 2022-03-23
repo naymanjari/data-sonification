@@ -14,6 +14,7 @@ let waning = false;
 let waxing = true;
 let eclipse = 0;
 let eclipsing = 0;
+let azimoth = 0;
 
 function preload(){
   table = loadTable('assets/Delhi_Az_Eclipse_tenyears.csv', 'csv', 'header');
@@ -47,6 +48,7 @@ function draw() {
       timer++;
       path = table.get(timer, phase);
       eclipse = table.get(timer, 7);
+      azimoth = table.get(timer, 1);
       counted = true;
       if (table.get(timer, 6) == 1) { //6 is NewMoon
         waxing = true;
@@ -70,7 +72,8 @@ function draw() {
       }
       let pathX = path;
       let pathY = 0.0025 * ((path-400)*(path-400)) + 400;
-      sendpath(pathX, pathY, eclipsing);
+      print(azimoth);
+      sendpath(pathX, pathY, eclipsing, azimoth);
     }
   }else{ //if millies() % 1000 < 500
     if(counted == true){
@@ -93,13 +96,14 @@ function draw() {
 
 
 // Function for sending to the socket
-function sendpath(pathX, pathY, eclipsing) {
+function sendpath(pathX, pathY, eclipsing, azimoth) {
 
 
   var data = {
     x: pathX,
     y: pathY,
-    e: eclipsing
+    e: eclipsing,
+    a: azimoth
   };
 
   // Send that object to the socket
